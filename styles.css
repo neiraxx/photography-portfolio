@@ -1,0 +1,126 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--red);
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+nav p {
+    letter-spacing: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.filter-buttons ul {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background-color: var(--red);
+    padding: 0.5rem;
+    flex-direction: column;
+    letter-spacing: 1rem;
+
+}
+
+.dropdown-content li {
+    margin: 0.5rem 0;
+    
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 400;
+    background: none;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.75rem;
+}
+
+.nav-link:hover {
+    color: #dc1c26;
+}
+
+.nav-link:active {
+    color: #2c91a8;
+}
+
+.portfolio-container {
+    padding: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.image-item {
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.image-item:hover {
+    cursor: pointer;
+}
+
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Adjust the opacity as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    /* Ensure it's above the navbar and gallery */
+}
+
+.image-overlay img {
+    max-width: 90%;
+    /* Adjust the size of the enlarged image */
+    max-height: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+

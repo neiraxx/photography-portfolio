@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="branding">
+            <p>dmytro shvets</p>
+        </div>
+        <div class="filter-buttons">
+            <ul>
+                <li>
+                    <button class="nav-link" onclick="toggleDropdown()">collections</button>
+                    <ul class="dropdown-content" id="dropdown-menu">
+                        <li><button class="nav-link" onclick="filterImages('street')">street</button></li>
+                        <li><button class="nav-link" onclick="filterImages('event')">event</button></li>
+                        <li><button class="nav-link" onclick="filterImages('portraits')">portrait</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="portfolio-container">
+        <div class="image-gallery">
+
+            <div class="image-item street">
+                <img src="./assets/images/street1.jpg" alt="Street Photography 1">
+            </div>
+            <div class="image-item street">
+                <img src="./assets/images/street2.jpg" alt="Street Photography 2">
+            </div>
+
+            <div class="image-item event">
+                <img src="./assets/images/event1.jpg" alt="Event Photography 1">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event2.jpg" alt="Event Photography 2">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event3.jpg" alt="Event Photography 3">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event4.jpg" alt="Event Photography 4">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event5.jpg" alt="Event Photography 5">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event6.jpg" alt="Event Photography 6">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event7.jpg" alt="Event Photography 7">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event8.jpg" alt="Event Photography 8">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event9.jpg" alt="Event Photography 9">
+            </div>
+            <div class="image-item event">
+                <img src="./assets/images/event10.jpg" alt="Event Photography 10">
+            </div>
+
+            <div class="image-item portraits">
+                <img src="./assets/images/portrait1.jpg" alt="Portrait Photography 1">
+            </div>
+            <div class="image-item portraits">
+                <img src="./assets/images/portrait2.jpg" alt="Portrait Photography 2">
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+
+</body>
+
+</html>
