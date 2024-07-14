@@ -124,3 +124,37 @@ nav p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Media query for mobile */
+@media only screen and (max-width: 768px) {
+        nav p {
+                margin-right: auto;
+                /* Push the name to the left */
+                display: inline;
+                /* Ensure it's visible */
+                letter-spacing: 1rem;
+                /* Adjust letter spacing */
+            }
+
+    .dropdown-content {
+        top: 10%;
+        /* Position dropdown below the button */
+        left: 50%;
+        /* Center the dropdown */
+        transform: translateX(-50%);
+        /* Adjust for centering */
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
+        white-space: nowrap;
+        /* Prevent text wrapping */
+        letter-spacing: 0.5rem;
+        /* Adjust letter spacing */
+    }
+
+    .dropdown-content li {
+        margin: 0.5rem 0;
+        letter-spacing: 0.5rem;
+    }
+}
