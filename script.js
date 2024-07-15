@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const dropdownMenu = document.getElementById('dropdown-menu');
     const filterButton = document.querySelector('.filter-buttons button');
-    const navbar = document.querySelector('.nav');
+    const navbar = document.querySelector('.navbar');
     const imageGallery = document.querySelector('.image-gallery');
 
     // Hide dropdown menu by default
     dropdownMenu.style.display = 'none';
 
-    // Show dropdown menu on hover
-    filterButton.addEventListener('mouseenter', function () {
-        dropdownMenu.style.display = 'block';
+    // Toggle dropdown menu on button click
+    filterButton.addEventListener('click', function () {
+        if (dropdownMenu.style.display === 'block') {
+            dropdownMenu.style.display = 'none';
+        } else {
+            dropdownMenu.style.display = 'block';
+        }
     });
 
     // Hide dropdown menu when mouse leaves
@@ -73,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Optional: Re-show the navbar on swipe up
     function handleSwipeUp() {
         if (touchendY < touchstartY) {
-            navbar.style.display = 'block';
+            navbar.style.display = 'flex';
         }
     }
 
@@ -95,3 +99,5 @@ function filterImages(category) {
         }
     });
 }
+
+// Function to to
