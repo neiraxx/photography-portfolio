@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const dropdownMenu = document.getElementById('dropdown-menu');
     const filterButton = document.querySelector('.filter-buttons button');
+    const navbar = document.querySelector('.navbar'); // Assuming you have a class named 'navbar' for your navigation bar
 
     // Hide dropdown menu by default
     dropdownMenu.style.display = 'none';
@@ -47,6 +48,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     imageGallery.addEventListener('mouseenter', function () {
         dropdownMenu.style.display = 'none';
+    });
+
+    // Detect swipe down to hide the navbar
+    let touchstartY = 0;
+    let touchendY = 0;
+
+    function handleGesture() {
+        if (touchendY > touchstartY) {
+            // Swipe down detected
+            navbar.style.display = 'none';
+        } else if (touchendY < touchstartY) {
+            // Swipe up detected (optional, you can handle this if needed)
+            navbar.style.display = 'block';
+        }
+    }
+
+    document.addEventListener('touchstart', function (event) {
+        touchstartY = event.changedTouches[0].screenY;
+    });
+
+    document.addEventListener('touchend', function (event) {
+        touchendY = event.changedTouches[0].screenY;
+        handleGesture();
     });
 });
 
