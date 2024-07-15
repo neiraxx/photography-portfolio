@@ -7,13 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hide dropdown menu by default
     dropdownMenu.style.display = 'none';
 
-    // Toggle dropdown menu on button click
-    filterButton.addEventListener('click', function () {
-        if (dropdownMenu.style.display === 'block') {
-            dropdownMenu.style.display = 'none';
-        } else {
-            dropdownMenu.style.display = 'block';
-        }
+    // Show dropdown menu on hover
+    filterButton.addEventListener('mouseenter', function () {
+        dropdownMenu.style.display = 'block';
     });
 
     // Hide dropdown menu when mouse leaves
@@ -53,12 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
         dropdownMenu.style.display = 'none';
     });
 
-    // Detect swipe down to hide the navbar in the image gallery area
+    // Detect swipe down to hide the navbar and dropdown menu in the image gallery area
     let touchstartY = 0;
     let touchendY = 0;
 
     function handleGesture() {
-        if (touchendY > touchstartY) {
+        if (touchendY > touchstartY + 50) { // Check for significant swipe down
             // Swipe down detected
             navbar.style.display = 'none';
             dropdownMenu.style.display = 'none'; // Hide the dropdown menu on swipe down
@@ -76,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Optional: Re-show the navbar on swipe up
     function handleSwipeUp() {
-        if (touchendY < touchstartY) {
+        if (touchendY < touchstartY - 50) { // Check for significant swipe up
             navbar.style.display = 'flex';
         }
     }
@@ -99,5 +95,3 @@ function filterImages(category) {
         }
     });
 }
-
-// Function to to
