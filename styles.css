@@ -124,6 +124,35 @@ nav p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.4);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instagram-link {
+    color: #000;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.instagram-link:hover {
+    color: #dc1c26;
+}
+
+.instagram-link:active {
+    color: #2c91a8;
+}
+
 /* Media query for mobile */
 @media only screen and (max-width: 768px) {
         nav p {
