@@ -1,20 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     const dropdownMenu = document.getElementById('dropdown-menu');
     const filterButton = document.querySelector('.filter-buttons button');
-    const navbar = document.querySelector('.navbar');
-    const imageGallery = document.querySelector('.image-gallery');
-
-    // Hide dropdown menu by default
-    dropdownMenu.style.display = 'none';
 
     // Show dropdown menu on hover
     filterButton.addEventListener('mouseenter', function () {
-        dropdownMenu.style.display = 'block';
+        dropdownMenu.classList.add('show');
     });
 
     // Hide dropdown menu when mouse leaves
+    filterButton.addEventListener('mouseleave', function () {
+        setTimeout(() => {
+            if (!dropdownMenu.matches(':hover')) {
+                dropdownMenu.classList.remove('show');
+            }
+        }, 100);
+    });
+
     dropdownMenu.addEventListener('mouseleave', function () {
-        dropdownMenu.style.display = 'none';
+        dropdownMenu.classList.remove('show');
     });
 
     // Initialize with default category
@@ -61,11 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hide dropdown menu on mouseover of gallery items
+    const imageGallery = document.querySelector('.image-gallery');
     imageGallery.addEventListener('mouseenter', function () {
-        dropdownMenu.style.display = 'none';
+        dropdownMenu.classList.remove('show');
     });
 
     // Detect swipe down to hide the navbar and dropdown menu in the image gallery area
+    const navbar = document.querySelector('.navbar');
     let touchstartY = 0;
     let touchendY = 0;
 
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (touchendY > touchstartY + 50) { // Check for significant swipe down
             // Swipe down detected
             navbar.style.display = 'none';
-            dropdownMenu.style.display = 'none'; // Hide the dropdown menu on swipe down
+            dropdownMenu.classList.remove('show'); // Hide the dropdown menu on swipe down
         }
     }
 
