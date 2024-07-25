@@ -89,6 +89,7 @@ nav p {
 
 .image-item {
     overflow: hidden;
+    border-radius: 2px;
 }
 
 .image-item img {
