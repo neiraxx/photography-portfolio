@@ -99,6 +99,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Ensure images load with fade-in effect
+const images = document.querySelectorAll('.image-item img');
+images.forEach(img => {
+    img.addEventListener('load', function () {
+        img.classList.add('loaded');
+    });
+
+    // For cached images
+    if (img.complete) {
+        img.classList.add('loaded');
+    }
+});
+
 // Filter images based on category
 function filterImages(category) {
     const images = document.querySelectorAll('.image-item');

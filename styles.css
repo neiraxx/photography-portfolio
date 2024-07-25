@@ -162,6 +162,29 @@ footer {
     color: #E1306C;
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the fade-in effect to images */
+.image-item img {
+    opacity: 0;
+    /* Initially invisible */
+    animation: fadeIn 1s forwards;
+    /* 1 second fade-in animation */
+}
+
+.image-item img.loaded {
+    opacity: 1;
+    /* Ensure fully visible after loading */
+}
 
 footer {
     position: fixed;
