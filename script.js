@@ -34,12 +34,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const overlay = document.createElement('div');
             overlay.classList.add('image-overlay');
+
+            // Create and style the close button
+            const closeButton = document.createElement('button');
+            closeButton.innerHTML = '&times;';
+            closeButton.classList.add('close-button');
+
+            // Append the image and close button to the overlay
             overlay.appendChild(enlargedImg);
+            overlay.appendChild(closeButton);
 
             document.body.appendChild(overlay);
 
-            overlay.addEventListener('click', function () {
+            // Close the overlay when the close button is clicked
+            closeButton.addEventListener('click', function () {
                 document.body.removeChild(overlay);
+            });
+
+            // Optional: Close the overlay when clicking outside the image
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    document.body.removeChild(overlay);
+                }
             });
         });
     });

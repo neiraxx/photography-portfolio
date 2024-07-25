@@ -124,6 +124,18 @@ nav p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 4; /* Ensure it is above the overlay */
+}
+
 /* Footer styles */
 footer {
     position: fixed;
