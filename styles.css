@@ -179,11 +179,18 @@ footer {
     /* Initially invisible */
     animation: fadeIn 1s forwards;
     /* 1 second fade-in animation */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the transform property */
 }
 
 .image-item img.loaded {
     opacity: 1;
     /* Ensure fully visible after loading */
+}
+
+.image-item:hover img {
+    transform: scale(1.05);
+    /* Scale the image slightly on hover */
 }
 
 footer {
