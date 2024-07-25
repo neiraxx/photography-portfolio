@@ -45,14 +45,19 @@ nav p {
     padding: 0.5rem;
     flex-direction: column;
     letter-spacing: 1rem;
-
 }
 
 .dropdown-content li {
     margin: 0.5rem 0;
-    
 }
 
+.filter-buttons button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-buttons button:hover {
+    transform: scale(1.05);
+}
 .nav-link {
     text-decoration: none;
     color: var(--white);
