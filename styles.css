@@ -233,7 +233,7 @@ footer {
         nav p {
                 margin-right: auto;
                 display: inline;
-                letter-spacing: 1rem;
+                letter-spacing: 0.5rem;
             }
 
     .dropdown-content {
@@ -242,14 +242,20 @@ footer {
         transform: translateX(-50%);
         display: flex;
         gap: 0.5rem;
-        flex-wrap: nowrap;
-        white-space: nowrap;
+        flex-wrap: wrap;
+        white-space: normal;
         letter-spacing: 0.5rem;
-    }
+        padding-right: 1rem;
+        }
 
     .dropdown-content li {
         margin: 0.5rem 0;
         letter-spacing: 0.5rem;
         padding-right: 0.5rem;
     }
+
+    .nav-link {
+        font-size: 1rem;
+        padding-right: 1rem;
+        }
 }
