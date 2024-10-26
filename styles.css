@@ -80,11 +80,7 @@ nav p {
 }
 
 .nav-link:hover {
-    color: #dc1c26;
-}
-
-.nav-link:active {
-    color: #2c91a8;
+    color: #9f86ec;
 }
 
 .portfolio-container {
@@ -171,7 +167,7 @@ footer {
 }
 
 .instagram-link:hover {
-    color: #E1306C;
+    color: #9f86ec;
 }
 
 /* Fade-in animation */
@@ -221,11 +217,7 @@ footer {
 }
 
 .instagram-link:hover {
-    color: #dc1c26;
-}
-
-.instagram-link:active {
-    color: #2c91a8;
+    color: #9f86ec;
 }
 
 /* Media query for mobile */
