@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Initialize with default category
-    filterImages('street'); // Initial filter
+    filterImages('concert'); // Initial filter
 
     // Handle image click to show overlay
     const imageItems = document.querySelectorAll('.image-item');
