@@ -94,13 +94,14 @@ nav p {
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 10px;
     padding: 1rem;
 }
 
 .image-item {
     overflow: hidden;
     border-radius: 2px;
+    grid-row: span auto;
 }
 
 .image-item img {
